@@ -3,7 +3,6 @@ import { Typography, Avatar, Input } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
 import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
-import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { Spin as Hamburger } from 'hamburger-react';
 
@@ -11,7 +10,7 @@ const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [search, setSearch] = useState(false);
   return (
-    <main className="w-full  flex-col relative cursor-pointer">
+    <main className="w-full  flex-col fixed cursor-pointer">
       {search && (
         <div className="w-52 absolute left-[30%] top-[6rem] ease-in-out  scale-100">
           <Input
@@ -22,7 +21,7 @@ const Nav = () => {
           />
         </div>
       )}
-      <nav className="flex justify-between px-6 py-5 items-center bg-[#0D1C1E] ">
+      <nav className="flex justify-between md:px-6 md:py-5 items-center bg-[#0D1C1E]  px-2 py-2">
         <Typography className="text-[20px] text-[#D0D0CF]">
           VINTAGEVISION
         </Typography>
