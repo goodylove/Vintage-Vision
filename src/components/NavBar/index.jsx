@@ -3,6 +3,8 @@ import { Typography, Avatar, Input } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
 import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
+import { HiOutlineShoppingBag } from 'react-icons/hi';
+import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { Spin as Hamburger } from 'hamburger-react';
 
 const Nav = () => {
@@ -29,19 +31,21 @@ const Nav = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/room">Room</Link>
+            <Link to="/room">Rooms</Link>
           </li>
           <li>
             <Link to="/furnitures">Furnitures</Link>
           </li>
           <li>
-            <Link to="/kitchen">Kitchen</Link>
+            <Link to="/kitchen">Kitchens</Link>
           </li>
           <li>
             <Link to="/decor">Decor</Link>
           </li>
         </ul>
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
+          <MdOutlineFavoriteBorder className=" text-[20px]" />
+
           <BsSearch onClick={() => setSearch((prev) => !prev)} />
           <BiCart className="text-[25px]" />
 

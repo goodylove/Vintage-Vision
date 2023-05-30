@@ -21,6 +21,7 @@ export const storeData = [
   {
     id: 1,
     name: 'rooms',
+    title: 'modern-living-room',
     price: 300,
     discount: '100',
     type: 'livingroom',
@@ -30,6 +31,7 @@ export const storeData = [
   {
     id: 2,
     name: 'rooms',
+    title: 'interior-of-living-room',
     price: 200,
     discount: 30,
     type: 'livingroom',
@@ -39,6 +41,7 @@ export const storeData = [
   {
     id: 3,
     name: 'rooms',
+    title: 'living-room-interior',
     price: 400,
     discount: 50,
     type: 'livingroom',
@@ -49,6 +52,7 @@ export const storeData = [
   {
     id: 4,
     name: 'rooms',
+    title: 'beautiful-living-room',
     price: 600,
     discount: 200,
     type: 'livingroom',
@@ -58,6 +62,7 @@ export const storeData = [
   {
     id: 5,
     name: 'rooms',
+    title: 'furnished-living-room',
     price: 500,
     discount: 100,
     type: 'livingroom',
@@ -67,6 +72,7 @@ export const storeData = [
   {
     id: 6,
     name: 'rooms',
+    title: 'dining',
     price: 260,
     discount: 22,
     type: 'diningroom',
@@ -76,6 +82,7 @@ export const storeData = [
   {
     id: 7,
     name: 'rooms',
+    title: 'large-open-dining',
     price: 260,
     discount: 22,
     type: 'diningroom',
@@ -85,6 +92,7 @@ export const storeData = [
   {
     id: 8,
     name: 'rooms',
+    title: 'light-living-room',
     price: 360,
     discount: 52,
     type: 'diningroom',
@@ -94,6 +102,7 @@ export const storeData = [
   {
     id: 9,
     name: 'rooms',
+    title: 'dining-room-3d-render',
     price: 460,
     discount: 52,
     type: 'diningroom',
@@ -103,6 +112,7 @@ export const storeData = [
   {
     id: 10,
     name: 'rooms',
+    title: 'dachshund',
     price: 260,
     discount: 52,
     type: 'bedroom',
@@ -112,6 +122,7 @@ export const storeData = [
   {
     id: 11,
     name: 'rooms',
+    title: 'modern-bedroom',
     price: 560,
     discount: 12,
     type: 'bedroom',
@@ -121,6 +132,7 @@ export const storeData = [
   {
     id: 12,
     name: 'rooms',
+    title: 'modern-farmhouse-bedroom',
     price: 860,
     discount: 320,
     type: 'bedroom',
@@ -130,6 +142,7 @@ export const storeData = [
   {
     id: 13,
     name: 'rooms',
+    title: 'frame-in-bedroom',
     price: 560,
     discount: 220,
     type: 'bedroom',
@@ -139,6 +152,7 @@ export const storeData = [
   {
     id: 14,
     name: 'rooms',
+    title: 'luxurious-cottage',
     price: 660,
     discount: 120,
     type: 'bedroom',
@@ -148,6 +162,7 @@ export const storeData = [
   {
     id: 15,
     name: 'furnitures',
+    title: 'kitchen-and-dining-room-with-table-and-chairs',
     price: 1060,
     discount: 420,
     type: 'table',
@@ -157,6 +172,7 @@ export const storeData = [
   {
     id: 16,
     name: 'furnitures',
+    title: 'modern-kitchen-interior-with-white-walls',
     price: 1260,
     discount: 220,
     type: 'table',
@@ -166,6 +182,7 @@ export const storeData = [
   {
     id: 17,
     name: 'furnitures',
+    title: 'modern-contemporary-white-kitchen-room',
     price: 1360,
     discount: 320,
     type: 'table',
@@ -175,6 +192,7 @@ export const storeData = [
   {
     id: 18,
     name: 'furnitures',
+    title: 'kitchen-interior-with-cupboard-and-bar',
     price: 1560,
     discount: 520,
     type: 'table',
@@ -184,6 +202,7 @@ export const storeData = [
   {
     id: 19,
     name: 'furnitures',
+    title: 'bedroom-at-night',
     price: 2560,
     discount: 520,
     type: 'nightstand',
@@ -193,6 +212,7 @@ export const storeData = [
   {
     id: 20,
     name: 'furnitures',
+    title: 'nightstand-in-bedroom',
     price: 2260,
     discount: 120,
     type: 'nightstand',
@@ -202,6 +222,7 @@ export const storeData = [
   {
     id: 21,
     name: 'furnitures',
+    title: 'wooden-cabin-bedroom.',
     price: 2210,
     discount: 220,
     type: 'nightstand',
@@ -211,6 +232,7 @@ export const storeData = [
   {
     id: 22,
     name: 'furnitures',
+    title: 'smartphone-on-nightstand-near-bed',
     price: 2290,
     discount: 320,
     type: 'nightstand',
@@ -220,6 +242,7 @@ export const storeData = [
   {
     id: 23,
     name: 'furnitures',
+    title: '-white-wall-with-sofa',
     price: 2290,
     discount: 320,
     type: 'sofa',
@@ -229,6 +252,7 @@ export const storeData = [
   {
     id: 24,
     name: 'furnitures',
+    title: 'modern-living-room with sofa',
     price: 1290,
     discount: 320,
     type: 'sofa',
@@ -238,6 +262,7 @@ export const storeData = [
   {
     id: 25,
     name: 'furnitures',
+    title: 'modern-living-room-interior',
     price: 3290,
     discount: 320,
     type: 'sofa',
@@ -247,6 +272,7 @@ export const storeData = [
   {
     id: 26,
     name: 'furnitures',
+    title: 'modern-living-room',
     price: 1290,
     discount: 320,
     type: 'sofa',
@@ -256,6 +282,7 @@ export const storeData = [
   {
     id: 27,
     name: 'kitchen',
+    title: 'black-and-white-modern-kitchen',
     price: 1290,
     discount: 320,
     type: 'kitchen',
@@ -265,6 +292,7 @@ export const storeData = [
   {
     id: 28,
     name: 'kitchen',
+    title: 'beautiful-kitchen-in-new-luxury-home',
     price: 2190,
     discount: 420,
     type: 'kitchen',
@@ -274,6 +302,7 @@ export const storeData = [
   {
     id: 29,
     name: 'kitchen',
+    title: 'blue-kitchen-with-stainless-steel',
     price: 1390,
     discount: 420,
     type: 'kitchen',
@@ -283,6 +312,7 @@ export const storeData = [
   {
     id: 30,
     name: 'kitchen',
+    title: 'wooden-countertop-with-defocused-kitchen',
     price: 1390,
     discount: 420,
     type: 'kitchen',
@@ -292,6 +322,7 @@ export const storeData = [
   {
     id: 31,
     name: 'kitchen',
+    title: 'modern-japandi-mock-up-room',
     price: 1590,
     discount: 420,
     type: 'kitchen',
@@ -301,6 +332,7 @@ export const storeData = [
   {
     id: 32,
     name: 'decor',
+    title: 'soft-bright-pink-armchair-in-vintage',
     price: 1590,
     discount: 420,
     type: 'decor',
@@ -310,6 +342,7 @@ export const storeData = [
   {
     id: 33,
     name: 'decor',
+    title: 'modern-living-room',
     price: 1490,
     discount: 420,
     type: 'decor',
@@ -319,6 +352,7 @@ export const storeData = [
   {
     id: 34,
     name: 'decor',
+    title: 'bookshelf-with-cozy-interior',
     price: 1490,
     discount: 420,
     type: 'decor',
@@ -328,6 +362,7 @@ export const storeData = [
   {
     id: 35,
     name: 'decor',
+    title: 'warm-and-cozy-composition-of-easter',
     price: 1590,
     discount: 220,
     type: 'decor',
@@ -337,6 +372,7 @@ export const storeData = [
   {
     id: 36,
     name: 'decor',
+    title: 'sofa',
     price: 1590,
     discount: 220,
     type: 'decor',
