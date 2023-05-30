@@ -1,9 +1,11 @@
 import Slider from '../../components/Slider/index';
+import ShippingCard from './Shiping';
 
 const Home = () => {
   return (
-    <div>
+    <div className="mt-[4rem]">
       <Slider />
+      <ShippingCard />
     </div>
   );
 };

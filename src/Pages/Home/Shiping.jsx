@@ -1,0 +1,29 @@
+import { shippingContent } from '../../data/dummudata';
+
+const ShippingCard = () => {
+  return (
+    <div>
+      {shippingContent.map((item, index) => (
+        <div
+          className="border-[1px] max-w-[300px] flex justify-center  py-10 rounded-md shadow-md "
+          key={index}
+        >
+          <div className="flex flex-col justify-center items-center gap-1 text-center w-full px-5">
+            <div
+              className="w-10 h-10 rounded-full bg-black text-white  flex items-center justify-center text-[20px]
+        "
+            >
+              {item.icon}
+            </div>
+            <h3 className="text-[30px] font-[400]">{item.title}</h3>
+            <p className="text-[16px] text-center font-[300] leading-[24px] tracking-tight">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ShippingCard;

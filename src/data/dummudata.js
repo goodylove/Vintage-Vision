@@ -1,3 +1,26 @@
+import { MdOutlineLocalShipping, MdPayments, MdChair } from 'react-icons/md';
+
+export const shippingContent = [
+  {
+    icon: MdOutlineLocalShipping,
+    title: 'Fast And Free Shipping',
+    description:
+      'Every single product are shipped for free, no minimium, no fine print or whatever',
+  },
+  {
+    icon: MdPayments,
+    title: 'Secured Payment',
+    description:
+      'Our payment method is very easy and self explainatory to the extent that anybody can make payment without mistake.',
+  },
+  {
+    icon: MdChair,
+    title: 'Quality Material',
+    description:
+      'We use premium material sustainably forested wood, strengthen steel hardware and top-grain',
+  },
+];
+
 export const sliderData = [
   {
     text: 'Best Home Decor',

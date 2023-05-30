@@ -10,7 +10,7 @@ const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [search, setSearch] = useState(false);
   return (
-    <main className="w-full  flex-col fixed cursor-pointer">
+    <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
       {search && (
         <div className="w-52 absolute left-[30%] top-[6rem] ease-in-out  scale-100">
           <Input
@@ -69,7 +69,7 @@ const Nav = () => {
         </div>
       </nav>
       {toggleMenu && (
-        <div className="mt-4 bg-[#0D1C1E] fixed h-[100vh]  top-[70px] w-[50%] flex justify-center">
+        <div className="mt-4 bg-[#0D1C1E] fixed h-[100vh]  top-[48px] w-[50%] flex justify-center  z-50">
           <ul className="  block  gap-8   text-[#D0D0CF]  ">
             <li className="py-3">
               <Link to="/">Home</Link>
