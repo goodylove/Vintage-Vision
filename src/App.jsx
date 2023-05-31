@@ -5,6 +5,7 @@ import Nav from './components/NavBar';
 import ProductCard from './components/ProductCard/index';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/index';
+import Login from './components/Login/index';
 import './App.css';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <div>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </div>
   );
