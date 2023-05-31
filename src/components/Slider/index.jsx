@@ -30,8 +30,8 @@ const Slider = () => {
             key={item.id}
             className={`w-full   ${
               item.id === sliderValue
-                ? '   duration-700 ease-in'
-                : '  duration-700 ease-in'
+                ? ' opacity-100  duration-700 ease-in'
+                : ' opacity-50 duration-700 ease-in'
             }`}
           >
             {item.id === sliderValue && (

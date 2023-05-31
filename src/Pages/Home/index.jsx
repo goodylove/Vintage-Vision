@@ -3,9 +3,11 @@ import ShippingCard from './Shiping';
 
 const Home = () => {
   return (
-    <div className="mt-[4rem]">
+    <div className="mt-[4rem] w-full">
       <Slider />
-      <ShippingCard />
+      <section className="w-full">
+        <ShippingCard />
+      </section>
     </div>
   );
 };
