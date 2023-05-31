@@ -3,15 +3,17 @@ import viteLogo from '/vite.svg';
 import Footer from './components/footer/index';
 import Nav from './components/NavBar';
 import ProductCard from './components/ProductCard/index';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/index';
 import './App.css';
-import ListOfProduct from './components/Listofproduct/index';
 
 function App() {
   return (
     <div>
       <Nav />
-      <ListOfProduct />
-      <ProductCard />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

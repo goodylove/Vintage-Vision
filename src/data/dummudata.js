@@ -1,18 +1,45 @@
+import { MdOutlineLocalShipping, MdPayments, MdChair } from 'react-icons/md';
+
+export const shippingContent = [
+  {
+    icon: MdOutlineLocalShipping,
+    title: 'Fast And Free Shipping',
+    description:
+      'Every single product are shipped for free, no minimium, no fine print or whatever',
+  },
+  {
+    icon: MdPayments,
+    title: 'Secured Payment',
+    description:
+      'Our payment method is very easy and self explainatory to the extent that anybody can make payment without mistake.',
+  },
+  {
+    icon: MdChair,
+    title: 'Quality Material',
+    description:
+      'We use premium material sustainably forested wood, strengthen steel hardware and top-grain',
+  },
+];
+
 export const sliderData = [
   {
-    id: 1,
+    text: 'Best Home Decor',
+    id: 0,
     img: 'https://media.istockphoto.com/id/1449364000/photo/minimalist-style-tiny-room.webp?b=1&s=170667a&w=0&k=20&c=AzO3qiY2FO7gNeUUN8CMGRka98MCJ5hnGRw303XZtkE=',
   },
   {
-    id: 2,
+    text: 'Vintage Vision',
+    id: 1,
     img: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9vbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60',
   },
   {
-    id: 3,
+    text: 'Home of Furnitures',
+    id: 2,
     img: 'https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cm9vbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60',
   },
   {
-    id: 4,
+    text: 'We Got You Covered',
+    id: 3,
     img: 'https://media.istockphoto.com/id/1440627430/photo/private-luxury-home-cinema-room.webp?b=1&s=170667a&w=0&k=20&c=yVUvUPc9w-uFe_oXs6qQ5qX9VY9YXiD0h2ANQ__QTI0=',
   },
 ];
