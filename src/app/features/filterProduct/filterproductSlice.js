@@ -18,8 +18,17 @@ const productSlice = createSlice({
       state.products = filteredProductByName;
       sessionStorage.setItem('product', JSON.stringify(filteredProductByName));
     },
+    productType: (state, action) => {
+      const productType = action.payload;
+
+      const filteredProductType = JSON.parse(sessionStorage.getItem('product'));
+      let producttype = filteredProductType.filter(
+        (product) => product.type === productType
+      );
+      state.products = producttype;
+    },
   },
 });
 
 export default productSlice.reducer;
-export const { pageProduct } = productSlice.actions;
+export const { pageProduct, productType } = productSlice.actions;

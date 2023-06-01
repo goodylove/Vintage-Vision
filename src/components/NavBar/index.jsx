@@ -47,18 +47,6 @@ const Nav = () => {
               </li>
             );
           })}
-          {/* <li>
-            <Link to="rooms">Rooms</Link>
-          </li>
-          <li>
-            <Link to="/furnitures">Furnitures</Link>
-          </li>
-          <li>
-            <Link to="/kitchen">Kitchens</Link>
-          </li>
-          <li>
-            <Link to="/decor">Decor</Link>
-          </li> */}
         </ul>
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
           <MdOutlineFavoriteBorder className=" text-[20px]" />
@@ -84,22 +72,20 @@ const Nav = () => {
       </nav>
       {toggleMenu && (
         <div className="mt-4 bg-[#0D1C1E] fixed h-[100vh]  top-[48px] w-[50%] flex justify-center  z-50">
-          <ul className="  block  gap-8   text-[#D0D0CF]  ">
-            <li className="py-3">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="py-3">
-              <Link to="/rooms">Room</Link>
-            </li>
-            <li className="py-3">
-              <Link to="/furnitures">Furnitures</Link>
-            </li>
-            <li className="py-3">
-              <Link to="/kitchen">Kitchen</Link>
-            </li>
-            <li className="py-3">
-              <Link to="/decor">Decor</Link>
-            </li>
+          <ul className="  flex flex-col  gap-8   text-[#D0D0CF]  ">
+            {myLinks.map((item, index) => {
+              return (
+                <li className="" key={index}>
+                  <Link
+                    to={item.link}
+                    className="uppercase"
+                    onClick={() => disptach(pageProduct(item.name))}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

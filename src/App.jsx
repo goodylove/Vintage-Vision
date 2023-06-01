@@ -8,6 +8,9 @@ import Home from './Pages/Home/index';
 import Login from './components/Login/index';
 import { useSelector } from 'react-redux';
 import Rooms from './Pages/Rooms/index';
+import Furnitures from './Pages/Furnitures/index';
+import Kitchens from './Pages/Kitchen/index';
+import Decor from './Pages/Decors/index';
 import './App.css';
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/rooms" element={<Rooms />} />
+            <Route path="/furnitures" element={<Furnitures />} />
+            <Route path="/kitchens" element={<Kitchens />} />
+            <Route path="/decor" element={<Decor />} />
           </Routes>
         </div>
       ) : (
