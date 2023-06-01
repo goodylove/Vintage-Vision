@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/index';
 import Login from './components/Login/index';
 import { useSelector } from 'react-redux';
+import Rooms from './Pages/Rooms/index';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/rooms" element={<Rooms />} />
           </Routes>
         </div>
       ) : (
