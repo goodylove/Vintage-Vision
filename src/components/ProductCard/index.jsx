@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Typography } from '@material-tailwind/react';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
+import Button from './../Button/index';
 // productCard
 const ProductCard = ({ item }) => {
   const [favorite, setFavorite] = useState(false);
@@ -36,9 +37,14 @@ const ProductCard = ({ item }) => {
             <span className=" line-through text-gray-500 font-[200]">
               ${item.discount}
             </span>
-            <button className="text-[12px] font-[200] border-[1px] px-[2px] rounded py-[2px]">
+            <Button
+              className={
+                'text-[12px] font-[200] border-[1px] px-[3px] rounded py-[2px]'
+              }
+              text="Details"
+            >
               Details
-            </button>
+            </Button>
           </div>
         </div>
       </div>

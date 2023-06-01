@@ -1,6 +1,7 @@
 import ProductSection from '../../components/ProductSection';
 import Slider from '../../components/Slider/index';
 import ShippingCard from './Shiping';
+import PaymentMethod from './../../components/PaymentMethod/index';
 
 const Home = () => {
   return (
@@ -11,6 +12,9 @@ const Home = () => {
       </section>
       <section>
         <ProductSection />
+      </section>
+      <section>
+        <PaymentMethod />
       </section>
     </div>
   );
