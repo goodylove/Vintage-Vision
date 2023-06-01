@@ -1,3 +1,4 @@
+import ProductSection from '../../components/ProductSection';
 import Slider from '../../components/Slider/index';
 import ShippingCard from './Shiping';
 
@@ -7,6 +8,9 @@ const Home = () => {
       <Slider />
       <section className="w-full">
         <ShippingCard />
+      </section>
+      <section>
+        <ProductSection />
       </section>
     </div>
   );

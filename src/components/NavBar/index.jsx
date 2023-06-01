@@ -23,8 +23,8 @@ const Nav = () => {
           />
         </div>
       )}
-      <nav className="flex justify-between md:px-6 md:py-5 items-center bg-[#0D1C1E]  px-2 py-2">
-        <Typography className="text-[20px] text-[#D0D0CF]">
+      <nav className="flex justify-between md:px-6 md:py-5 items-center bg-[#0D1C1E]  px-1 py-2">
+        <Typography className="text-[15px] text-[#D0D0CF] md:text-[20px]  md:font-[600]">
           VINTAGEVISION
         </Typography>
         <ul className="md:hidden  justify-around gap-8 items-center hidden text-[#D0D0CF] sm:hidden lg:flex">
