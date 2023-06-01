@@ -11,7 +11,7 @@ const ShippingCard = () => {
         >
           <div className="flex flex-col justify-center items-center gap-1 text-center w-full px-5">
             <div
-              className="w-10 h-10 rounded-full bg-black text-white  flex items-center justify-center text-[20px]
+              className="w-10 h-10 rounded-full bg-[#0D1C1E]  text-white  flex items-center justify-center text-[20px]
         "
             >
               {<item.icon />}
