@@ -23,7 +23,7 @@ const ProductCard = ({ item }) => {
         </div>
         <div className="flex  gap-2 justify-between px-2  bg-black text-white items-center rounded-b py-2">
           <div className="flex  flex-col py-1">
-            <Typography className="font-[300] text-[18px]">
+            <Typography className="font-[300] text-[10px] md:text-[18px]">
               {item.title.charAt('0').toUpperCase() + item.title.slice(1)}
             </Typography>
             <Typography className=" font-Poppins text-[16px] font-[100]">

@@ -11,6 +11,7 @@ import Rooms from './Pages/Rooms/index';
 import Furnitures from './Pages/Furnitures/index';
 import Kitchens from './Pages/Kitchen/index';
 import Decor from './Pages/Decors/index';
+import SingleProduct from './components/SingleProduct/index';
 import './App.css';
 
 function App() {
@@ -26,8 +27,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/rooms" element={<Rooms />} />
             <Route path="/furnitures" element={<Furnitures />} />
-            <Route path="/kitchens" element={<Kitchens />} />
+            <Route path="/kitchen" element={<Kitchens />} />
             <Route path="/decor" element={<Decor />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
           </Routes>
         </div>
       ) : (
