@@ -15,14 +15,15 @@ const LoginSlice = createSlice({
   reducers: {
     AddUser: (state, action) => {
       let userId = action.payload;
-      const validateEmail = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i.test(
+      const validatePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,10}$/i.test(
         userId.password
       );
       let newUser = { ...state, user: (state.user = userId) };
-      if (!validateEmail) {
-        newUser.user.authUser = false;
+      Object.assign(state, newUser);
+      if (!validatePassword) {
+        state.user.authUser = false;
       } else {
-        newUser.user.authUser = true;
+        state.user.authUser = true;
         sessionStorage.setItem('user', JSON.stringify(userId));
       }
     },

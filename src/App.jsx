@@ -6,15 +6,26 @@ import ProductCard from './components/ProductCard/index';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/index';
 import Login from './components/Login/index';
+import { useSelector } from 'react-redux';
 import './App.css';
 
 function App() {
+  const authUser = useSelector((state) => state.login.user.authUser);
+  console.log(authUser);
+
   return (
     <div>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Login />} />
-      </Routes>
+      {authUser ? '' : <Login />}
+      {authUser ? (
+        <div>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 }

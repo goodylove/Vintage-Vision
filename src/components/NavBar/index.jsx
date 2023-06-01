@@ -5,9 +5,11 @@ import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { Spin as Hamburger } from 'hamburger-react';
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const img = useSelector((state) => state.login.user.img);
   const [search, setSearch] = useState(false);
   return (
     <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
@@ -49,11 +51,7 @@ const Nav = () => {
           <BiCart className="text-[25px]" />
 
           <span className="gap-2 flex items-center">
-            <Avatar
-              src="https://www.material-tailwind.com/img/face-2.jpg"
-              alt="avatar"
-              className="w-5 h-5"
-            />
+            {img && <Avatar src={img} alt="avatar" className="w-5 h-5" />}
           </span>
         </div>
         <div className="flex md:hidden text-[#D0D0CF]">
