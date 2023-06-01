@@ -5,10 +5,16 @@ import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { Spin as Hamburger } from 'hamburger-react';
-import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { pageProduct } from '../../app/features/filterProduct/filterproductSlice';
+import { storeData, myLinks } from '../../data/dummudata';
 
 const Nav = () => {
+  const { rooms } = useParams();
+  const disptach = useDispatch();
   const [toggleMenu, setToggleMenu] = useState(false);
+
   const img = useSelector((state) => state.login.user.img);
   const [search, setSearch] = useState(false);
   return (
@@ -28,11 +34,21 @@ const Nav = () => {
           VINTAGEVISION
         </Typography>
         <ul className="md:hidden  justify-around gap-8 items-center hidden text-[#D0D0CF] sm:hidden lg:flex">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/room">Rooms</Link>
+          {myLinks.map((item, index) => {
+            return (
+              <li className="" key={index}>
+                <Link
+                  to={item.link}
+                  className="uppercase"
+                  onClick={() => disptach(pageProduct(item.name))}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+          {/* <li>
+            <Link to="rooms">Rooms</Link>
           </li>
           <li>
             <Link to="/furnitures">Furnitures</Link>
@@ -42,7 +58,7 @@ const Nav = () => {
           </li>
           <li>
             <Link to="/decor">Decor</Link>
-          </li>
+          </li> */}
         </ul>
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
           <MdOutlineFavoriteBorder className=" text-[20px]" />
@@ -73,7 +89,7 @@ const Nav = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="py-3">
-              <Link to="/room">Room</Link>
+              <Link to="/rooms">Room</Link>
             </li>
             <li className="py-3">
               <Link to="/furnitures">Furnitures</Link>

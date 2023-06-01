@@ -12,7 +12,6 @@ import './App.css';
 
 function App() {
   const authUser = useSelector((state) => state.login.user.authUser);
-  console.log(authUser);
 
   return (
     <div>

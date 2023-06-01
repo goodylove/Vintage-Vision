@@ -1,5 +1,28 @@
 import { MdOutlineLocalShipping, MdPayments, MdChair } from 'react-icons/md';
 
+export const myLinks = [
+  {
+    name: 'home',
+    link: '/',
+  },
+  {
+    name: 'rooms',
+    link: '/rooms',
+  },
+  {
+    name: 'furnitures',
+    link: '/furnitures',
+  },
+  {
+    name: 'kitchen',
+    link: '/kitchen',
+  },
+  {
+    name: 'decor',
+    link: '/decor',
+  },
+];
+
 export const shippingContent = [
   {
     icon: MdOutlineLocalShipping,
