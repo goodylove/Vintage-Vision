@@ -2,8 +2,14 @@ import { useState } from 'react';
 import { Typography } from '@material-tailwind/react';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import Button from './../Button/index';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { singleProduct } from '../../app/features/filterProduct/filterproductSlice';
+
 // productCard
+
 const ProductCard = ({ item }) => {
+  const dispatch = useDispatch();
   const [favorite, setFavorite] = useState(false);
   const handleFavoriteIcon = () => {
     setFavorite((prev) => !prev);
@@ -37,14 +43,19 @@ const ProductCard = ({ item }) => {
             <span className=" line-through text-gray-500 font-[200]">
               ${item.discount}
             </span>
-            <Button
-              className={
-                'text-[12px] font-[200] border-[1px] px-[3px] rounded py-[2px]'
-              }
-              text="Details"
+            <Link
+              to={`/singleproduct/${item.id}`}
+              onClick={() => dispatch(singleProduct(item))}
             >
-              Details
-            </Button>
+              <Button
+                className={
+                  'text-[12px] font-[200] border-[1px] px-[3px] rounded py-[2px]'
+                }
+                text="Details"
+              >
+                Details
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { storeData } from './../../../data/dummudata';
 
 const initialState = {
   products: JSON.parse(sessionStorage.getItem('product')) || storeData,
+  singleProducts: JSON.parse(sessionStorage.getItem('single')) || storeData,
 };
 
 const productSlice = createSlice({
@@ -27,8 +28,20 @@ const productSlice = createSlice({
       );
       state.products = producttype;
     },
+    singleProduct: (state, action) => {
+      const productId = action.payload;
+      const singleProductItem = storeData.find(
+        (product) => product.id === productId.id
+      );
+      const newState = {
+        ...state.singleProducts,
+        singleProducts: (state.singleProducts = singleProductItem),
+      };
+      // console.log(newState);
+      sessionStorage.setItem('single', JSON.stringify(singleProductItem));
+    },
   },
 });
 
 export default productSlice.reducer;
-export const { pageProduct, productType } = productSlice.actions;
+export const { pageProduct, productType, singleProduct } = productSlice.actions;

@@ -6,7 +6,7 @@ import Footer from './../../components/footer/index';
 
 const Home = () => {
   return (
-    <div className="mt-[4rem] w-full">
+    <div className="mt-[4rem] w-full home">
       <Slider />
       <section className="w-full">
         <ShippingCard />
