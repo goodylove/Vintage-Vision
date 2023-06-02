@@ -70,6 +70,7 @@ export const sliderData = [
 export const storeData = [
   {
     id: 1,
+    quantity: 1,
     name: 'rooms',
     title: 'modern-living-room',
     price: 300,
@@ -80,6 +81,7 @@ export const storeData = [
   },
   {
     id: 2,
+    quantity: 1,
     name: 'rooms',
     title: 'interior-of-living-room',
     price: 200,
@@ -90,6 +92,7 @@ export const storeData = [
   },
   {
     id: 3,
+    quantity: 1,
     name: 'rooms',
     title: 'living-room-interior',
     price: 400,
@@ -101,6 +104,7 @@ export const storeData = [
 
   {
     id: 4,
+    quantity: 1,
     name: 'rooms',
     title: 'beautiful-living-room',
     price: 600,
@@ -111,6 +115,7 @@ export const storeData = [
   },
   {
     id: 5,
+    quantity: 1,
     name: 'rooms',
     title: 'furnished-living-room',
     price: 500,
@@ -121,6 +126,7 @@ export const storeData = [
   },
   {
     id: 6,
+    quantity: 1,
     name: 'rooms',
     title: 'dining',
     price: 260,
@@ -131,6 +137,7 @@ export const storeData = [
   },
   {
     id: 7,
+    quantity: 1,
     name: 'rooms',
     title: 'large-open-dining',
     price: 260,
@@ -141,6 +148,7 @@ export const storeData = [
   },
   {
     id: 8,
+    quantity: 1,
     name: 'rooms',
     title: 'light-living-room',
     price: 360,
@@ -151,6 +159,7 @@ export const storeData = [
   },
   {
     id: 9,
+    quantity: 1,
     name: 'rooms',
     title: 'dining-room-3d-render',
     price: 460,
@@ -161,6 +170,7 @@ export const storeData = [
   },
   {
     id: 10,
+    quantity: 1,
     name: 'rooms',
     title: 'dachshund',
     price: 260,
@@ -171,6 +181,7 @@ export const storeData = [
   },
   {
     id: 11,
+    quantity: 1,
     name: 'rooms',
     title: 'modern-bedroom',
     price: 560,
@@ -181,6 +192,7 @@ export const storeData = [
   },
   {
     id: 12,
+    quantity: 1,
     name: 'rooms',
     title: 'modern-farmhouse-bedroom',
     price: 860,
@@ -191,6 +203,7 @@ export const storeData = [
   },
   {
     id: 13,
+    quantity: 1,
     name: 'rooms',
     title: 'frame-in-bedroom',
     price: 560,
@@ -201,6 +214,7 @@ export const storeData = [
   },
   {
     id: 14,
+    quantity: 1,
     name: 'rooms',
     title: 'luxurious-cottage',
     price: 660,
@@ -211,6 +225,7 @@ export const storeData = [
   },
   {
     id: 15,
+    quantity: 1,
     name: 'furnitures',
     title: 'kitchen-and-dining-room-with-table-and-chairs',
     price: 1060,
@@ -221,6 +236,7 @@ export const storeData = [
   },
   {
     id: 16,
+    quantity: 1,
     name: 'furnitures',
     title: 'modern-kitchen-interior-with-white-walls',
     price: 1260,
@@ -231,6 +247,7 @@ export const storeData = [
   },
   {
     id: 17,
+    quantity: 1,
     name: 'furnitures',
     title: 'modern-contemporary-white-kitchen-room',
     price: 1360,
@@ -241,6 +258,7 @@ export const storeData = [
   },
   {
     id: 18,
+    quantity: 1,
     name: 'furnitures',
     title: 'kitchen-interior-with-cupboard-and-bar',
     price: 1560,
@@ -251,6 +269,7 @@ export const storeData = [
   },
   {
     id: 19,
+    quantity: 1,
     name: 'furnitures',
     title: 'bedroom-at-night',
     price: 2560,
@@ -261,6 +280,7 @@ export const storeData = [
   },
   {
     id: 20,
+    quantity: 1,
     name: 'furnitures',
     title: 'nightstand-in-bedroom',
     price: 2260,
@@ -271,6 +291,7 @@ export const storeData = [
   },
   {
     id: 21,
+    quantity: 1,
     name: 'furnitures',
     title: 'wooden-cabin-bedroom.',
     price: 2210,
@@ -281,6 +302,7 @@ export const storeData = [
   },
   {
     id: 22,
+    quantity: 1,
     name: 'furnitures',
     title: 'smartphone-on-nightstand-near-bed',
     price: 2290,
@@ -291,6 +313,7 @@ export const storeData = [
   },
   {
     id: 23,
+    quantity: 1,
     name: 'furnitures',
     title: '-white-wall-with-sofa',
     price: 2290,
@@ -301,6 +324,7 @@ export const storeData = [
   },
   {
     id: 24,
+    quantity: 1,
     name: 'furnitures',
     title: 'modern-living-room with sofa',
     price: 1290,
@@ -311,6 +335,7 @@ export const storeData = [
   },
   {
     id: 25,
+    quantity: 1,
     name: 'furnitures',
     title: 'modern-living-room-interior',
     price: 3290,
@@ -321,6 +346,7 @@ export const storeData = [
   },
   {
     id: 26,
+    quantity: 1,
     name: 'furnitures',
     title: 'modern-living-room',
     price: 1290,
@@ -331,6 +357,7 @@ export const storeData = [
   },
   {
     id: 27,
+    quantity: 1,
     name: 'kitchen',
     title: 'black-and-white-modern-kitchen',
     price: 1290,
@@ -341,6 +368,7 @@ export const storeData = [
   },
   {
     id: 28,
+    quantity: 1,
     name: 'kitchen',
     title: 'beautiful-kitchen-in-new-luxury-home',
     price: 2190,
@@ -351,6 +379,7 @@ export const storeData = [
   },
   {
     id: 29,
+    quantity: 1,
     name: 'kitchen',
     title: 'blue-kitchen-with-stainless-steel',
     price: 1390,
@@ -361,6 +390,7 @@ export const storeData = [
   },
   {
     id: 30,
+    quantity: 1,
     name: 'kitchen',
     title: 'wooden-countertop-with-defocused-kitchen',
     price: 1390,
@@ -371,6 +401,7 @@ export const storeData = [
   },
   {
     id: 31,
+    quantity: 1,
     name: 'kitchen',
     title: 'modern-japandi-mock-up-room',
     price: 1590,
@@ -381,6 +412,7 @@ export const storeData = [
   },
   {
     id: 32,
+    quantity: 1,
     name: 'decor',
     title: 'soft-bright-pink-armchair-in-vintage',
     price: 1590,
@@ -391,6 +423,7 @@ export const storeData = [
   },
   {
     id: 33,
+    quantity: 1,
     name: 'decor',
     title: 'modern-living-room',
     price: 1490,
@@ -401,6 +434,7 @@ export const storeData = [
   },
   {
     id: 34,
+    quantity: 1,
     name: 'decor',
     title: 'bookshelf-with-cozy-interior',
     price: 1490,
@@ -411,6 +445,7 @@ export const storeData = [
   },
   {
     id: 35,
+    quantity: 1,
     name: 'decor',
     title: 'warm-and-cozy-composition-of-easter',
     price: 1590,
@@ -421,6 +456,7 @@ export const storeData = [
   },
   {
     id: 36,
+    quantity: 1,
     name: 'decor',
     title: 'sofa',
     price: 1590,
