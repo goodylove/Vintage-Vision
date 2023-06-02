@@ -12,6 +12,7 @@ import Furnitures from './Pages/Furnitures/index';
 import Kitchens from './Pages/Kitchen/index';
 import Decor from './Pages/Decors/index';
 import SingleProduct from './components/SingleProduct/index';
+import Cart from './Pages/Cart/index';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/kitchen" element={<Kitchens />} />
             <Route path="/decor" element={<Decor />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       ) : (

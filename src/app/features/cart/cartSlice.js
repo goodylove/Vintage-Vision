@@ -12,13 +12,24 @@ const cartSlice = createSlice({
       const productId = action.payload;
 
       const exist = state.cartItem.find((item) => item.id === productId.id);
-      console.log(exist);
+
       if (exist) {
         exist.quantity += productId.quantity;
         exist.price += productId.price;
       } else {
-        state.cartItem.push(exist);
-        sessionStorage.setItem('cart', JSON.stringify(exist));
+        const newItem = {
+          id: productId.id,
+          quantity: productId.quantity,
+          name: productId.name,
+          price: productId.price,
+          type: productId.type,
+          title: productId.title,
+          text: productId.text,
+          img: productId.img,
+        };
+        state.cartItem.push(newItem);
+
+        sessionStorage.setItem('cart', JSON.stringify(state.cartItem));
       }
     },
   },

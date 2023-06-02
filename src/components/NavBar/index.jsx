@@ -5,17 +5,17 @@ import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { Spin as Hamburger } from 'hamburger-react';
-import { useParams } from 'react-router-dom';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { pageProduct } from '../../app/features/filterProduct/filterproductSlice';
-import { storeData, myLinks } from '../../data/dummudata';
+import { myLinks } from '../../data/dummudata';
 
 const Nav = () => {
-  const { rooms } = useParams();
   const disptach = useDispatch();
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const img = useSelector((state) => state.login.user.img);
+  const cartLength = useSelector((state) => state.cart.cartItem.length);
   const [search, setSearch] = useState(false);
   return (
     <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
@@ -52,8 +52,18 @@ const Nav = () => {
           <MdOutlineFavoriteBorder className=" text-[20px]" />
 
           <BsSearch onClick={() => setSearch((prev) => !prev)} />
-          <BiCart className="text-[25px]" />
-
+          <Link to="/cart">
+            <div className="relative">
+              <BiCart className="text-[25px]" />
+              {cartLength > 0 ? (
+                <span className="absolute bg-white text-black p-[9px] w-4 h-4 rounded-full flex justify-center items-center top-[-11px] left-[7px] font-[300] text-[14px]">
+                  {cartLength}
+                </span>
+              ) : (
+                ''
+              )}
+            </div>
+          </Link>
           <span className="gap-2 flex items-center">
             {img && <Avatar src={img} alt="avatar" className="w-5 h-5" />}
           </span>

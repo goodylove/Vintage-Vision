@@ -1,12 +1,16 @@
 import Button from './../Button/index';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addItemsToCart } from '../../app/features/cart/cartSlice';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Footer from './../footer/index';
 
 const SingleProduct = () => {
+  const dispatch = useDispatch();
   const singleProduct = useSelector((state) => state.product.singleProducts);
-  const { img, price, name, discount, type } = singleProduct;
+  const { img, price, name, discount, type, id, text, quantity } =
+    singleProduct;
+
   return (
     <>
       <main className="w-full flex justify-center items-center mt-10">
@@ -36,13 +40,24 @@ const SingleProduct = () => {
 
                 <p className="max-w-[300px] font-Poppins font-[300]">
                   <span className="text-[20px] font-[400]">Discriptions:</span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi dolorum modi unde, assumenda minima exercitationem
-                  labore vitae veritatis eveniet consectetur quod inventore nam
-                  voluptas facilis et, accusamus, quibusdam dolor minus.
+                  {text}
                 </p>
                 <div className="flex  items-center my-2 gap-5">
                   <Button
+                    onClick={() =>
+                      dispatch(
+                        addItemsToCart({
+                          id: id,
+                          name: name,
+                          price: price,
+                          quantity: quantity,
+                          text: text,
+                          img: img,
+                          type: type,
+                          discount: discount,
+                        })
+                      )
+                    }
                     className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px]"
                     text="Add To Cart"
                   />
