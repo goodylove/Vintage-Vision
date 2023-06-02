@@ -1,26 +1,22 @@
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
-import Footer from './../footer/index';
 import Button from '../Button';
-const CartItemCard = () => {
+const CartItemCard = ({ item }) => {
   return (
     <>
       <main className="flex w-full justify-center items-center my-10">
         <section className="flex flex-col md:flex-row sm:flex-col lg:flex-row gap-6 my-10 items-center">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/1328744010/photo/modern-living-room-interior-3d-render.webp?b=1&s=170667a&w=0&k=20&c=l5r2BiGHF2R_6Zfu6ttQKFx7xrpHssrTbYNFgLrrNkA="
-              alt=""
-            />
+          <div className="max-w-[400px] h-67">
+            <img src={item.img} alt="" className="w-full h-full" />
           </div>
 
           <div>
-            <h3>name</h3>
-            <h4>price</h4>
-            <h4>quanity</h4>
+            <h3>Name:{item.name}</h3>
+            <h4>Price:{item.price}</h4>
+            <h4>Quantity:{item.quantity}</h4>
 
             <div className="flex gap-3 items-center">
               <AiOutlineMinusCircle />
-              <span>price</span>
+              <span>{item.price}</span>
               <AiOutlinePlusCircle />
             </div>
             <Button
@@ -30,8 +26,6 @@ const CartItemCard = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 };

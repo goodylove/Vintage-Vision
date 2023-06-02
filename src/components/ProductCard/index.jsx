@@ -15,7 +15,7 @@ const ProductCard = ({ item }) => {
     setFavorite((prev) => !prev);
   };
   return (
-    <div className="rounded shadow-lg cursor-pointer   h-auto  w-full ">
+    <div className="rounded shadow-lg cursor-pointer   h-auto  ">
       <div className="relative  h-auto ">
         <div className="max-w-[400px] h-[200px]">
           <img src={item.img} alt="" className=" rounded-t h-full w-full" />
