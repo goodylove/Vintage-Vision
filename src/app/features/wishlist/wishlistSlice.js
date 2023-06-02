@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  wishList: {
+  wishLists: {
     wish: [],
     exist: false,
   },
@@ -14,13 +14,13 @@ const wishListSlice = createSlice({
     addToWishList: (state, action) => {
       const productId = action.payload;
 
-      const wishListExist = state.wishList.wish.find(
-        (product) => (product.id = productId.id)
+      const wishListExist = state.wishLists.wish.find(
+        (product) => product.id === productId.id
       );
       if (wishListExist) {
-        state.wishList.exist = true;
+        state.wishLists.exist = true;
       } else {
-        state.wishList.wish.push({
+        state.wishLists.wish.push({
           id: productId.id,
           quantity: productId.quantity,
           name: productId.name,
@@ -32,7 +32,18 @@ const wishListSlice = createSlice({
         });
       }
     },
+    removeWishlist: (state, action) => {
+      const productId = action.payload;
+      const wishExist = state.wishLists.wish.find(
+        (item) => item.id === productId.id
+      );
+      if (wishExist) {
+        state.wishLists.wish = state.wishLists.wish.filter(
+          (wish) => wish.id !== productId.id
+        );
+      }
+    },
   },
 });
 export default wishListSlice.reducer;
-export const { addToWishList } = wishListSlice.actions;
+export const { addToWishList, removeWishlist } = wishListSlice.actions;

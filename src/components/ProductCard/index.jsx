@@ -3,13 +3,18 @@ import { Typography } from '@material-tailwind/react';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import Button from './../Button/index';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { singleProduct } from '../../app/features/filterProduct/filterproductSlice';
+import {
+  addToWishList,
+  removeWishlist,
+} from '../../app/features/wishlist/wishlistSlice';
 
 // productCard
 
 const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
+  const whishList = useSelector((state) => state.wishList.wishLists);
   const [favorite, setFavorite] = useState(false);
   const handleFavoriteIcon = () => {
     setFavorite((prev) => !prev);
@@ -22,9 +27,15 @@ const ProductCard = ({ item }) => {
         </div>
         <div onClick={handleFavoriteIcon}>
           {favorite ? (
-            <MdOutlineFavorite className="absolute top-[10rem] right-7 text-[30px] bg-gray-300 rounded-md px-[5px] text-gray-800 hover:scale-x-95 lg:top-[10rem]" />
+            <MdOutlineFavorite
+              className="absolute top-[10rem] right-7 text-[30px] bg-gray-300 rounded-md px-[5px] text-gray-800 hover:scale-x-95 lg:top-[10rem]"
+              onClick={() => dispatch(removeWishlist(item))}
+            />
           ) : (
-            <MdOutlineFavoriteBorder className="absolute top-[10rem] right-7 text-[30px] bg-gray-300 rounded-md px-[5px] text-gray-800 hover:scale-x-95 lg:top-[10rem]" />
+            <MdOutlineFavoriteBorder
+              className="absolute top-[10rem] right-7 text-[30px] bg-gray-300 rounded-md px-[5px] text-gray-800 hover:scale-x-95 lg:top-[10rem]"
+              onClick={() => dispatch(addToWishList(item))}
+            />
           )}
         </div>
         <div className="flex  gap-2 justify-between px-2  bg-black text-white items-center rounded-b py-2">

@@ -18,6 +18,9 @@ const Nav = () => {
 
   const img = useSelector((state) => state.login.user.img);
   const cartLength = useSelector((state) => state.cart.cartItem.length);
+  const wishLength = useSelector(
+    (state) => state.wishList.wishLists.wish.length
+  );
   const [mobileMenu, setmobileMenu] = useState(false);
   return (
     <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
@@ -51,14 +54,25 @@ const Nav = () => {
           })}
         </ul>
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
-          <MdOutlineFavoriteBorder className=" text-[20px]" />
+          <Link to="/whishlist">
+            <div className="relative">
+              <MdOutlineFavoriteBorder className=" text-[20px]" />
+              {wishLength > 0 ? (
+                <span className="absolute bg-white text-black p-[6px] w-3 h-3 rounded-full flex justify-center items-center top-[-4px] left-[7px] font-[300] text-[10px]">
+                  {wishLength}
+                </span>
+              ) : (
+                ''
+              )}
+            </div>
+          </Link>
 
           {/* <BsSearch onClick={() => setSearch((prev) => !prev)} /> */}
           <Link to="/cart">
             <div className="relative">
               <BiCart className="text-[25px]" />
               {cartLength > 0 ? (
-                <span className="absolute bg-white text-black p-[9px] w-4 h-4 rounded-full flex justify-center items-center top-[-11px] left-[7px] font-[300] text-[14px]">
+                <span className="absolute bg-white text-black p-[6px] w-3 h-3 rounded-full flex justify-center items-center top-[-3px] left-[10px] font-[300] text-[10px]">
                   {cartLength}
                 </span>
               ) : (
