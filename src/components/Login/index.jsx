@@ -20,7 +20,7 @@ export default function Login() {
   };
   const [loginInfo, setLoginInfo] = useState(initialState);
   const authUser = useSelector((state) => state.login.user.authUser);
-
+  const [checkvalidPassword, setCheckValidPassword] = useState(false);
   const dispatch = useDispatch();
 
   const handleInputChange = (e) => {
@@ -29,6 +29,14 @@ export default function Login() {
       ...loginInfo,
       [name]: value,
     });
+  };
+  const handleClick = () => {
+    dispatch(AddUser(loginInfo));
+    if (!authUser) {
+      setCheckValidPassword(true);
+    } else {
+      setCheckValidPassword(false);
+    }
   };
 
   return (
@@ -39,7 +47,7 @@ export default function Login() {
         </div>
         <div
           action=""
-          className="border-[1px]  h-[300px] w-[350px] flex flex-col p-5  gap-5 rounded-md  shadow-md"
+          className="border-[1px]  h-[300px] w-[350px] flex flex-col p-5  gap-3 rounded-md  shadow-md"
         >
           <input
             type="text"
@@ -55,10 +63,15 @@ export default function Login() {
             placeholder="password"
             value={loginInfo.password}
             className={`border-[1px] p-2 font-[300] outline-none  rounded-md ${
-              authUser ? '' : 'border-red-100'
+              checkvalidPassword ? 'border-red-100' : ''
             } `}
             onChange={handleInputChange}
           />
+          {checkvalidPassword && (
+            <span className="text-[9px] text-red-600">
+              A valid password must be 8 characters
+            </span>
+          )}
           <input
             type="text"
             name="img"
@@ -69,7 +82,7 @@ export default function Login() {
           />
           <button
             type="submit"
-            onClick={() => dispatch(AddUser(loginInfo))}
+            onClick={handleClick}
             className="border-[1px] p-2 bg-[#0D1C1E] text-white  rounded-md shadow-md font-[300]"
           >
             SIGIN IN
