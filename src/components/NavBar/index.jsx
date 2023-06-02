@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { BiCart } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { AiOutlineClose } from 'react-icons/ai';
 import { Spin as Hamburger } from 'hamburger-react';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,10 +18,10 @@ const Nav = () => {
 
   const img = useSelector((state) => state.login.user.img);
   const cartLength = useSelector((state) => state.cart.cartItem.length);
-  const [search, setSearch] = useState(false);
+  const [mobileMenu, setmobileMenu] = useState(false);
   return (
     <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
-      {search && (
+      {/* {search && (
         <div className="w-52 absolute left-[30%] top-[6rem] ease-in-out  scale-100">
           <Input
             label="search"
@@ -28,8 +30,8 @@ const Nav = () => {
             variant="outlined"
           />
         </div>
-      )}
-      <nav className="flex justify-between md:px-6 md:py-5 items-center bg-[#0D1C1E]  px-1 py-2">
+      )} */}
+      <nav className="flex justify-between md:px-6 md:py-5 items-center bg-[#0D1C1E]  px-1 py-2 ">
         <Typography className="text-[15px] text-[#D0D0CF] md:text-[20px]  md:font-[600]">
           VINTAGEVISION
         </Typography>
@@ -51,7 +53,7 @@ const Nav = () => {
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
           <MdOutlineFavoriteBorder className=" text-[20px]" />
 
-          <BsSearch onClick={() => setSearch((prev) => !prev)} />
+          {/* <BsSearch onClick={() => setSearch((prev) => !prev)} /> */}
           <Link to="/cart">
             <div className="relative">
               <BiCart className="text-[25px]" />
@@ -69,7 +71,7 @@ const Nav = () => {
           </span>
         </div>
         <div className="flex md:hidden text-[#D0D0CF]">
-          <Hamburger
+          {/* <Hamburger
             onToggle={(toggleMenu) => {
               if (toggleMenu) {
                 setToggleMenu(true);
@@ -77,15 +79,30 @@ const Nav = () => {
                 setToggleMenu(false);
               }
             }}
-          />
+          /> */}
+          {toggleMenu ? (
+            <AiOutlineClose
+              className="text-[45px] pr-3 text-white"
+              onClick={() => setToggleMenu(false)}
+            />
+          ) : (
+            <RxHamburgerMenu
+              className="text-[40px] pr-3"
+              onClick={() => setToggleMenu(true)}
+            />
+          )}
         </div>
       </nav>
       {toggleMenu && (
-        <div className="mt-4 bg-[#0D1C1E] fixed h-[100vh]  top-[48px] w-[50%] flex justify-center  z-50">
+        <div className="mt-[0.8rem] bg-[#0D1C1E] fixed h-[100vh]  top-[48px] w-[50%] flex justify-center  z-50">
           <ul className="  flex flex-col  gap-8   text-[#D0D0CF]  ">
             {myLinks.map((item, index) => {
               return (
-                <li className="" key={index}>
+                <li
+                  className=""
+                  key={index}
+                  onClick={() => setToggleMenu((prev) => !prev)}
+                >
                   <Link
                     to={item.link}
                     className="uppercase"

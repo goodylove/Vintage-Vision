@@ -53,7 +53,7 @@ export default function Footer() {
               </span>
               <span className="flex items-center py-1">
                 <IoIosCall className="text-[24px] bg-white rounded-full text-black text-center mr-1 px-[6px]" />
-                <a href="tel:+2349098557284">+2349068557284</a>
+                <a href="tel:+2349068557284">+2349068557284</a>
               </span>
               <span className="flex items-center py-1">
                 <AiOutlineMail className="text-[24px]  bg-white rounded-full text-black text-center mr-1 px-[6px]" />
