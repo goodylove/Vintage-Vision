@@ -3,15 +3,15 @@ import { shippingContent } from '../../data/dummudata';
 
 const ShippingCard = () => {
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-4 sm:grid-cols-2 w-full justify-items-center my-10">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-4  sm:grid-cols-2 w-full justify-items-center my-10">
       {shippingContent.map((item, index) => (
         <div
-          className="border-[1px] max-w-[300px] flex justify-center  py-10 rounded-md shadow-md "
+          className="border-[1px] lg:w-[330px] flex justify-center  py-10 rounded-md shadow-md md:w-[280px] w-[250px] "
           key={index}
         >
           <div className="flex flex-col justify-center items-center gap-1 text-center w-full px-5">
             <div
-              className="w-10 h-10 rounded-full bg-black text-white  flex items-center justify-center text-[20px]
+              className="w-10 h-10 rounded-full bg-[#0D1C1E]  text-white  flex items-center justify-center text-[20px]
         "
             >
               {<item.icon />}

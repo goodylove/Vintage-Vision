@@ -7,11 +7,17 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/index';
 import Login from './components/Login/index';
 import { useSelector } from 'react-redux';
+import Rooms from './Pages/Rooms/index';
+import Furnitures from './Pages/Furnitures/index';
+import Kitchens from './Pages/Kitchen/index';
+import Decor from './Pages/Decors/index';
+import SingleProduct from './components/SingleProduct/index';
+import Cart from './Pages/Cart/index';
+import WhishList from './Pages/wishlist';
 import './App.css';
 
 function App() {
   const authUser = useSelector((state) => state.login.user.authUser);
-  console.log(authUser);
 
   return (
     <div>
@@ -21,6 +27,13 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/rooms" element={<Rooms />} />
+            <Route path="/furnitures" element={<Furnitures />} />
+            <Route path="/kitchen" element={<Kitchens />} />
+            <Route path="/decor" element={<Decor />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/whishlist" element={<WhishList />} />
           </Routes>
         </div>
       ) : (

@@ -25,13 +25,13 @@ export default function Footer() {
                 variant="h5"
                 className="font-bold text-start my-2 text-[18px]"
               >
-                Elegant Closets
+                VINTAGE VISION
               </Typography>
               <Typography
                 variant="small"
                 className="leading-[20px] tracking-normal max-w-[400px] text-start"
               >
-                Elegant Closets is clearing and creating living spaces that are
+                Vintage Vision is clearing and creating living spaces that are
                 visually appealing and more attractive to the human eye.
                 Designing and decorating our homes is something we can easily
                 envision. We all know what our ideal home looks like, and often
@@ -53,7 +53,7 @@ export default function Footer() {
               </span>
               <span className="flex items-center py-1">
                 <IoIosCall className="text-[24px] bg-white rounded-full text-black text-center mr-1 px-[6px]" />
-                <a href="tel:+2349098557284">+2349068557284</a>
+                <a href="tel:+2349068557284">+2349068557284</a>
               </span>
               <span className="flex items-center py-1">
                 <AiOutlineMail className="text-[24px]  bg-white rounded-full text-black text-center mr-1 px-[6px]" />
@@ -122,7 +122,7 @@ export default function Footer() {
             Website built by <i>GOODNESS</i>
           </Typography>
           <Typography>
-            &copy; Elegant Closets &nbsp;
+            &copy; VINTAGE VISION &nbsp;
             {currentYear}
           </Typography>
         </div>
