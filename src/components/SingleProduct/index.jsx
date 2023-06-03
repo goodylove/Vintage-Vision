@@ -4,6 +4,11 @@ import { addItemsToCart } from '../../app/features/cart/cartSlice';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Footer from './../footer/index';
+import {
+  addToWishList,
+  removeWishlist,
+} from '../../app/features/wishlist/wishlistSlice';
+
 import { useState } from 'react';
 
 const SingleProduct = () => {
@@ -12,6 +17,7 @@ const SingleProduct = () => {
   const { img, price, name, discount, type, id, text, quantity } =
     singleProduct;
   const [addedItems, setAddedItem] = useState(false);
+  const [addedwhish, setAddedWish] = useState(false);
 
   return (
     <>
@@ -65,8 +71,11 @@ const SingleProduct = () => {
                     text={addedItems ? 'Added To Cart' : 'Add To Cart'}
                   />
                   <Button
+                    onClick={() =>
+                      dispatch(addToWishList(singleProduct), setAddedWish(true))
+                    }
                     className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md  shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px]"
-                    text="Add To Wishlist"
+                    text={addedwhish ? 'Added To Wishlist' : 'Add To Wishlist'}
                   />
                 </div>
               </div>

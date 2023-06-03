@@ -6,7 +6,6 @@ import { BsSearch } from 'react-icons/bs';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Spin as Hamburger } from 'hamburger-react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { pageProduct } from '../../app/features/filterProduct/filterproductSlice';
