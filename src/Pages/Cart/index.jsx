@@ -3,9 +3,19 @@ import { useSelector } from 'react-redux';
 import Footer from './../../components/footer/index';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Button from '../../components/Button';
 
 const Cart = () => {
   const cartItem = useSelector((state) => state.cart.cartItem);
+  let total;
+  let getTotal = cartItem.map((item, index) => {
+    return item.price * item.quantity;
+  });
+  if (getTotal.length > 0) {
+    total = getTotal.reduce((acc, item) => {
+      return acc + item;
+    });
+  }
   return (
     <>
       <main className="my-20 flex items-center justify-center w-full">
@@ -26,6 +36,13 @@ const Cart = () => {
               {cartItem.map((item, index) => (
                 <CartItemCard item={item} key={index} />
               ))}
+              <div className="flex flex-col">
+                <span>totalPrice:${total} </span>
+                <Button
+                  className="rounded-md p-2 text-white bg-[#0D1C1E] shadow-xl"
+                  text="CheckOut"
+                />
+              </div>
             </div>
           )}
         </section>
