@@ -67,14 +67,14 @@ const SingleProduct = () => {
                         setAddedItem(true)
                       )
                     }
-                    className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px]"
+                    className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px] text-[12px]"
                     text={addedItems ? 'Added To Cart' : 'Add To Cart'}
                   />
                   <Button
                     onClick={() =>
                       dispatch(addToWishList(singleProduct), setAddedWish(true))
                     }
-                    className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md  shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px]"
+                    className=" border-[2px] bg-[#0D1C1E] text-[#D0D0CF] rounded-md  shadow-md lg:p-3 hover:bg-white hover:text-black sm:p-[7px] p-[5px] text-[12px]"
                     text={addedwhish ? 'Added To Wishlist' : 'Add To Wishlist'}
                   />
                 </div>

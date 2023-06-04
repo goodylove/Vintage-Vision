@@ -46,7 +46,7 @@ const Cart = () => {
         {cartItem.length > 0 && (
           <div className="flex flex-col">
             <span className="my-5">TotalPrice:${total} </span>
-            <Link to="/checkout">
+            <Link to="/paymentdetails">
               <Button
                 className="rounded p-2 text-white bg-[#0D1C1E] shadow-xl w-[240px]"
                 text="Proceed to Checkout"

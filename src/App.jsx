@@ -15,6 +15,7 @@ import Cart from './Pages/Cart/index';
 import WhishList from './Pages/wishlist';
 import Checkout from './Pages/Checkout/index';
 import './App.css';
+import PaymentDetails from './Pages/Paymentdetails';
 
 function App() {
   const authUser = useSelector((state) => state.login.user.authUser);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/whishlist" element={<WhishList />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/paymentdetails" element={<PaymentDetails />} />
           </Routes>
         </div>
       ) : (
