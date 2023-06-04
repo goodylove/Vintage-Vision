@@ -26,7 +26,7 @@ const Checkout = () => {
     alert('Error: ' + error);
   }
   return (
-    <main className="flex justify-center items-center h-[100vh]">
+    <main className="flex justify-center items-center h-[100vh] relative -z-0">
       <div>
         <h3 className="my-3">Click on the button to proceed </h3>
         <PayPalScriptProvider
