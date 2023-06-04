@@ -16,7 +16,7 @@ const CartItemCard = ({ item }) => {
             <img src={item.img} alt="" className="w-full h-full" />
           </div>
 
-          <div>
+          <div className="flex flex-col  gap-1 text-[20px]">
             <h3>Name:{item.type}</h3>
             <h4>Price:${item.price}</h4>
             <h4>Quantity:{item.quantity}</h4>
@@ -31,7 +31,7 @@ const CartItemCard = ({ item }) => {
               />
             </div>
             <Button
-              className="bg-red-500 rounded-md text-white p-2 w-[100px] mt-5"
+              className="bg-red-500 rounded-md text-white p-2 w-[140px] mt-5"
               text="Remove"
               onClick={() => dispatch(removeItemFromCart(item))}
             />
