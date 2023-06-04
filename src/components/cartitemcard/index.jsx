@@ -18,7 +18,7 @@ const CartItemCard = ({ item }) => {
 
           <div>
             <h3>Name:{item.type}</h3>
-            <h4>Price:{item.price}</h4>
+            <h4>Price:${item.price}</h4>
             <h4>Quantity:{item.quantity}</h4>
 
             <div className="flex gap-3 items-center">
