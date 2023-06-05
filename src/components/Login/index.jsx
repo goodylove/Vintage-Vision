@@ -70,7 +70,7 @@ export default function Login() {
           {checkvalidPassword && (
             <span className="text-[9px] text-red-600">
               password must be at least 8 characters and not more than 10
-              characters long
+              characters long and must include number and letters.
             </span>
           )}
           <input
