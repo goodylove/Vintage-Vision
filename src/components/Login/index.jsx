@@ -50,7 +50,7 @@ export default function Login() {
           className="border-[1px]  h-[300px] w-[350px] flex flex-col p-5  gap-3 rounded-md  shadow-md"
         >
           <input
-            type="text"
+            type="password"
             name="name"
             value={loginInfo.name}
             placeholder="Name"
