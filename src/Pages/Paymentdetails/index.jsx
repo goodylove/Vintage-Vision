@@ -32,7 +32,6 @@ const PaymentDetails = () => {
           >
             <div className="flex flex-col my-2 gap-3 w-full">
               <label htmlFor="email" className="text-[10px] font-[400]">
-                {' '}
                 Email
               </label>
               <input
