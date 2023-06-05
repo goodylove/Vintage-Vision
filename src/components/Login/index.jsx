@@ -58,7 +58,7 @@ export default function Login() {
             onChange={handleInputChange}
           />
           <input
-            type="text"
+            type="password"
             name="password"
             placeholder="password"
             value={loginInfo.password}
