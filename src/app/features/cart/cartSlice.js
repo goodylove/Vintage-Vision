@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  cartItem: [],
+  cartItem: JSON.parse(sessionStorage.getItem('cart')) ?? [],
 };
 
 const cartSlice = createSlice({
@@ -27,6 +27,8 @@ const cartSlice = createSlice({
           img: productId.img,
         };
         state.cartItem.push(newItem);
+        console.log(state.cartItem);
+        sessionStorage.setItem('cart', JSON.stringify(state.cartItem));
       }
     },
     increaseQuantity: (state, action) => {
