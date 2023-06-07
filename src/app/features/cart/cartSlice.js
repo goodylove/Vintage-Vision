@@ -26,8 +26,9 @@ const cartSlice = createSlice({
           text: productId.text,
           img: productId.img,
         };
-        let items = state.cartItem.push(newItem);
-        sessionStorage.setItem('cart', JSON.stringify(items));
+        state.cartItem.push(newItem);
+        console.log(state.cartItem);
+        sessionStorage.setItem('cart', JSON.stringify(state.cartItem));
       }
     },
     increaseQuantity: (state, action) => {
