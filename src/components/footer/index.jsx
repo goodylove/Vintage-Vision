@@ -69,14 +69,14 @@ export default function Footer() {
                   <BsLink45Deg />
                   <Link to="/">Home</Link>
                 </span>
-                <span className="flex items-center py-1">
+                {/* <span className="flex items-center py-1">
                   <BsLink45Deg />
                   <Link to="/about">About</Link>
                 </span>
                 <span className="flex items-center py-1">
                   <BsLink45Deg />
                   <Link to="/contact">Contact Us</Link>
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="">
