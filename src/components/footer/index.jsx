@@ -11,9 +11,9 @@ import {
   BsTwitter,
 } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-
+// get the current year
 const currentYear = new Date().getFullYear();
-
+// footer section components
 export default function Footer() {
   return (
     <footer className="relative w-full bg-[#0D1C1E] text-[#D0D0CF] py-5">
