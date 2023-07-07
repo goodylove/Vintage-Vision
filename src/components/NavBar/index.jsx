@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Typography, Avatar, Input } from '@material-tailwind/react';
+import { Typography, Avatar } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
 import { BiCart } from 'react-icons/bi';
 
-import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
+import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -20,13 +20,30 @@ const Nav = () => {
   const wishLength = useSelector(
     (state) => state.wishList.wishLists.wish.length
   );
-  const [mobileMenu, setmobileMenu] = useState(false);
+  // const [mobileMenu, setmobileMenu] = useState(false);
   return (
     <main className="w-full  flex-col fixed top-0 cursor-pointer z-50">
-      <nav className="flex justify-between items-center bg-[#0D1C1E]  px-1 py-2 ">
+      <nav className="flex justify-between items-center bg-[#0D1C1E]  px-1 py-5">
         <Typography className="text-[15px] text-[#D0D0CF] md:text-[20px]  md:font-[600]">
           VINTAGEVISION
         </Typography>
+        <div className="hidden md:flex">
+          <ul className="  flex  gap-8   text-[#D0D0CF]  ">
+            {myLinks.map((item, index) => {
+              return (
+                <li className="" key={index}>
+                  <Link
+                    to={item.link}
+                    className="uppercase"
+                    onClick={() => disptach(pageProduct(item.name))}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
         <div className="flex gap-2 items-center  text-[#D0D0CF] flex-row">
           <Link to="/whishlist">
